@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Fx9-3d-XtI">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="2j7-2e-fUi">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Fx9-3d-XtI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="smd-aE-oir">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.21839712559999999" green="0.17147308589999999" blue="0.83695650099999996" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iRo-zt-d2o" kind="relationship" relationship="rootViewController" id="MhV-aQ-3C6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ptn-au-b4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91" y="132"/>
+        </scene>
+        <!--Test Bed View Controller-->
+        <scene sceneID="iCw-ml-ihD">
+            <objects>
+                <viewController id="iRo-zt-d2o" customClass="TestBedViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gnF-dn-ihY"/>
+                        <viewControllerLayoutGuide type="bottom" id="61x-Ia-ebH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QBn-bB-k3J">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pdK-Bc-sWe">
+                                <rect key="frame" x="20" y="84" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MuD-AV-m8c">
+                                <rect key="frame" x="203" y="84" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MuD-AV-m8c" firstAttribute="width" secondItem="pdK-Bc-sWe" secondAttribute="width" id="J4z-Hd-X48"/>
+                            <constraint firstItem="pdK-Bc-sWe" firstAttribute="top" secondItem="gnF-dn-ihY" secondAttribute="bottom" constant="20" id="Njr-ce-DWF"/>
+                            <constraint firstItem="pdK-Bc-sWe" firstAttribute="leading" secondItem="QBn-bB-k3J" secondAttribute="leading" constant="20" id="SUV-0n-uUH"/>
+                            <constraint firstItem="MuD-AV-m8c" firstAttribute="top" secondItem="gnF-dn-ihY" secondAttribute="bottom" constant="20" id="fVD-Q0-GPM"/>
+                            <constraint firstAttribute="trailing" secondItem="MuD-AV-m8c" secondAttribute="trailing" constant="20" id="rHc-l9-7BL"/>
+                            <constraint firstItem="MuD-AV-m8c" firstAttribute="baseline" secondItem="pdK-Bc-sWe" secondAttribute="baseline" id="sPr-4u-os3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cAY-bd-rgQ"/>
+                    <connections>
+                        <outlet property="leftTextField" destination="pdK-Bc-sWe" id="lHg-rN-WK1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MgC-DV-SVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="282" y="132"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

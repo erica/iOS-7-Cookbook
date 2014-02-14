@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pIz-WA-0iW">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="O1d-fM-MJD">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="pIz-WA-0iW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RfY-fI-86j">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xL7-A6-63f" kind="relationship" relationship="rootViewController" id="XY5-15-8hP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuI-Sl-QUK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-449" y="11"/>
+        </scene>
+        <!--Test Bed View Controller-->
+        <scene sceneID="3LV-Fd-1y0">
+            <objects>
+                <viewController id="xL7-A6-63f" customClass="TestBedViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BCK-Wr-xwH"/>
+                        <viewControllerLayoutGuide type="bottom" id="2aP-Mq-rIe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cYk-hq-uIV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <switch opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vhj-po-kay">
+                                <rect key="frame" x="136" y="174" width="51" height="31"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nametag" value="topSwitch"/>
+                                </userDefinedRuntimeAttributes>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqQ-gF-2ZP">
+                                <rect key="frame" x="20" y="228" width="280" height="23"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nametag" value="infoLabel"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lqQ-gF-2ZP" firstAttribute="top" secondItem="vhj-po-kay" secondAttribute="bottom" constant="23" id="4cA-hy-UKQ"/>
+                            <constraint firstItem="vhj-po-kay" firstAttribute="top" secondItem="BCK-Wr-xwH" secondAttribute="bottom" constant="110" id="Acc-Mv-Klb"/>
+                            <constraint firstItem="vhj-po-kay" firstAttribute="centerX" secondItem="cYk-hq-uIV" secondAttribute="centerX" id="eQr-xr-L4z"/>
+                            <constraint firstItem="vhj-po-kay" firstAttribute="centerX" secondItem="lqQ-gF-2ZP" secondAttribute="centerX" id="uLO-ns-1YA"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="nametag" value=""/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="UeB-IV-HGF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rUY-X5-d9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6" y="11"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
