@@ -24,6 +24,14 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>This example uses your device's camera to capture videos.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This example uses your device's microphone to capture audio.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This exampe can store captured videos in your photo library.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This example may access your photo library for videos.</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
