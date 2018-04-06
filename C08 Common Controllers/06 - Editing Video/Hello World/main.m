@@ -19,7 +19,7 @@
 
 @implementation TestBedViewController
 {
-    UIPopoverController *popover;
+    // UIPopoverController *popover;
     NSURL *mediaURL;
 }
 
@@ -52,8 +52,8 @@
         [self dismissViewControllerAnimated:YES completion:nil];
     else
     {
-        [popover dismissPopoverAnimated:YES];
-        popover = nil;
+        // [popover dismissPopoverAnimated:YES];
+        // popover = nil;
     }
 }
 
@@ -65,9 +65,9 @@
 	}
 	else
 	{
-        popover = [[UIPopoverController alloc] initWithContentViewController:viewControllerToPresent];
-        popover.delegate = self;
-        [popover presentPopoverFromBarButtonItem:self.navigationItem.rightBarButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        self.modalPresentationStyle = UIModalPresentationPopover;
+        self.popoverPresentationController.barButtonItem = self.navigationItem.rightBarButtonItem;
+        [self presentViewController:viewControllerToPresent animated:YES completion:nil];
 	}
 }
 
@@ -100,7 +100,7 @@
 
 - (void)editMedia
 {
-    if (popover) return;
+    //if (popover) return;
     
 	if (![UIVideoEditorController canEditVideoAtPath:mediaURL.path])
 	{
@@ -119,7 +119,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     [self performDismiss];
-    popover = nil;
+    //popover = nil;
     mediaURL = [info objectForKey:UIImagePickerControllerMediaURL];
     self.navigationItem.rightBarButtonItem = BARBUTTON(@"Edit", @selector(editMedia));
 }
@@ -131,16 +131,9 @@
     [self performDismiss];
 }
 
-// Popover was dismissed
-- (void)popoverControllerDidDismissPopover:(UIPopoverController *)aPopoverController
-{
-    popover = nil;
-}
 
 - (void)pickVideo
-{
-    if (popover) return;
-    
+{    
     // Create and initialize the picker
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;

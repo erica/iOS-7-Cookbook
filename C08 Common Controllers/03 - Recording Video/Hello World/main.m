@@ -84,15 +84,6 @@
     
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
-    [self performDismiss];
-    
-	// recover video URL and save data
-	NSURL *mediaURL = [info objectForKey:UIImagePickerControllerMediaURL];
-    [self saveVideo:mediaURL];
-}
-
 
 // Dismiss picker
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
